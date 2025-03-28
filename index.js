@@ -1,4 +1,5 @@
 const form = document.querySelector("#mesaj");
+const buton = document.querySelector("#buton");
 
 async function sendData() {
   // Associate the FormData object with the form element
@@ -20,4 +21,6 @@ async function sendData() {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   sendData();
+  buton.innerText = "Gönderildi";
+  setTimeout(() => {buton.innerText = "Bana mesaj gönder!"}, 1000)
 });
